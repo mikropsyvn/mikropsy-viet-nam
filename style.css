@@ -1,0 +1,119 @@
+:root{--ink:#282e22;--green:#344833;--muted:#555a4c;--paper:#faf8f0;--line:#d9d8ca;--sage:#d3ddc4;--rose:#ead2cc;--sand:#e8dbb9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--paper);font:400 1rem/1.7 "Be Vietnam Pro",Arial,sans-serif}
+a{color:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #956335;outline-offset:4px}
+.skip{position:absolute;left:1rem;top:1rem;z-index:3;background:white;padding:.7rem;transform:translateY(-200%)}.skip:focus{transform:none}
+.shell{width:min(1200px,calc(100% - 96px));margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:82px}
+.brand{text-decoration:none;font:600 2.7rem/1 "Lora",Georgia,serif;letter-spacing:-.085em}.brand span{color:#ae665c}
+nav{display:flex;gap:clamp(1rem,3vw,2.75rem)}nav a{text-decoration:none;font-size:.9rem}nav a:hover,.text-link:hover{text-decoration-thickness:2px;text-decoration-line:underline}
+.pill{display:inline-block;border:1px solid var(--green);border-radius:100px;padding:.66rem 1.15rem;font-size:.88rem;font-weight:600;text-decoration:none;white-space:nowrap}.solid{background:var(--green);color:white}.solid:hover{background:#263925}.outline:hover{background:var(--sage)}
+.hero{display:grid;grid-template-columns:1.03fr 1fr;align-items:stretch;margin-top:34px;min-height:475px;background:#e7ebda}
+.hero-copy{padding:clamp(2rem,5vw,4.7rem) clamp(1.4rem,4vw,4rem);align-self:center}
+.eyebrow{font-size:.77rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin:0 0 .85rem}
+h1,h2,h3{font-family:"Lora",Georgia,serif;font-weight:500;line-height:1.16;margin:0;letter-spacing:-.04em}
+h1{font-size:clamp(2.7rem,5vw,4.9rem)}h1 em{color:#4c6549;font-weight:400}h2{font-size:clamp(2rem,3.7vw,3.5rem)}h3{font-size:1.46rem}
+p{margin:.85rem 0;color:var(--muted)}.hero-copy>p:not(.eyebrow){max-width:30rem;margin:1.2rem 0 1.7rem}
+.actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.text-link{font-size:.88rem;font-weight:600;text-underline-offset:.27em}
+.hero-photo{min-height:100%;position:relative;background:var(--sage)}.hero-photo img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center 53%}
+.panel{padding-block:clamp(3.25rem,6vw,6rem)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:1.2rem;margin-bottom:1.8rem}.section-head>p{max-width:22rem;margin:0;font-size:.92rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.tile,.cover{display:grid;place-items:center;overflow:hidden}.tile{aspect-ratio:1.48;margin-bottom:1.1rem}.sage{background:var(--sage)}.rose{background:var(--rose)}.sand{background:var(--sand)}
+.tile>div{display:grid;align-content:center;justify-items:center;gap:.25rem;width:34%;aspect-ratio:.72;box-shadow:7px 10px 15px #34271936;border:1px solid #0002;font-family:"Lora",Georgia,serif;color:#344833}.tile span{font-size:clamp(1.6rem,4vw,3.2rem);line-height:1.1}.tile small{font-size:.76rem;text-align:center}.deck{transform:rotate(-12deg);background:#f3ecd9}.book{transform:rotate(10deg);background:#f8ece4;border-left:8px solid #b8796d!important}.sheet{transform:rotate(-8deg);background:#fffcf3}
+.grid article>p:not(.eyebrow){font-size:.94rem}
+.service{background:#e7ebda}.service-inner,.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);padding-block:clamp(3rem,6vw,5.4rem);align-items:center}.service .pill{margin-top:.65rem}
+details{border-bottom:1px solid #a9b39e;padding:1rem 0}details:first-child{border-top:1px solid #a9b39e}summary{cursor:pointer;font-weight:600}details p{margin:.6rem 0 0}
+.filters{display:flex;flex-wrap:wrap;gap:.4rem}.filters button{background:transparent;border:1px solid var(--line);border-radius:20px;padding:.48rem .7rem;color:var(--ink);cursor:pointer;font:500 .8rem "Be Vietnam Pro",Arial,sans-serif}.filters button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.cover{height:142px;margin-bottom:1.15rem;color:#3e5239;font:italic 500 3.4rem "Lora",Georgia,serif}.articles article{border-bottom:1px solid var(--line);padding-bottom:1.2rem}.articles .eyebrow{margin-bottom:.6rem}
+.about{border-top:1px solid var(--line)}.about-inner{grid-template-columns:1fr 2fr;align-items:start}.about p:not(.eyebrow){max-width:43rem}
+footer{background:#344833;color:#fff}.footer{display:flex;justify-content:space-between;gap:2rem;padding-block:3rem}.footer p{color:#e5eadc}.footer h2{font-size:1.35rem}.footer ul{list-style:none;padding:0;margin:.7rem 0 0}.footer li{margin:.25rem 0}.footer a{text-underline-offset:.23em}.footer .brand span{color:#e2ada3}
+@media(max-width:900px){.shell{width:calc(100% - 48px)}.hero{min-height:410px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:670px){.shell{width:calc(100% - 32px)}.top{display:grid;grid-template-columns:1fr auto;gap:.65rem;padding-block:.85rem}.top nav{grid-column:1/-1;grid-row:2;flex-wrap:wrap;gap:.4rem 1rem}.brand{font-size:2.25rem}.hero{grid-template-columns:1fr;margin-top:16px}.hero-photo{aspect-ratio:1.45}.hero-copy{padding:2rem 1.25rem}.grid{grid-template-columns:1fr;gap:1.8rem}.service-inner,.about-inner{grid-template-columns:1fr;gap:1.4rem}.footer{flex-direction:column}.tile{aspect-ratio:1.75}.tile>div{width:25%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Catalog layout */
+:root{--paper:#fff;--ink:#202b25;--green:#234e42;--muted:#4a534e;--line:#e3e6e1}
+body{background:white}
+header{border:0}
+.top{display:grid;grid-template-columns:1fr auto;gap:0;padding:0}
+.top>.brand{grid-column:1/-1;justify-self:center;padding:1.15rem 0 .85rem;font-size:3.2rem}
+.brand span{color:#618b73}
+.top nav{grid-row:2;grid-column:1;display:flex;gap:clamp(.9rem,2.4vw,2rem);flex-wrap:wrap;padding:.85rem 0}
+.top nav a{font-size:.79rem;font-weight:700;text-transform:uppercase}
+.top>.pill{grid-row:2;grid-column:2;justify-self:end;padding:.34rem .8rem;border-radius:0;font-size:.75rem}
+.catalog-tools{grid-row:3;grid-column:1/-1;padding:.65rem 0;border-block:1px solid var(--line);display:flex;gap:.8rem;align-items:center}
+.catalog-tools label{font-size:.82rem;font-weight:700;white-space:nowrap}
+.catalog-tools input{width:min(100%,24rem);font:inherit;font-size:.9rem;border:1px solid var(--line);padding:.42rem .65rem;border-radius:0}
+.hero{display:grid;grid-template-columns:1.45fr 1fr;min-height:0;margin-top:1.4rem;background:#f1f4eb}
+.hero-copy{padding:clamp(1.8rem,4vw,3.7rem)}
+h1{font-size:clamp(2.45rem,4.3vw,4.15rem)}
+.hero-copy>p:not(.eyebrow){margin:.75rem 0 1.1rem}
+.hero-photo{background:#dfe8d9;display:grid;place-items:center;overflow:hidden}
+.hero-photo img{display:none}
+.botanical{position:relative;width:100%;height:100%;min-height:240px;display:grid;place-items:center;background:radial-gradient(ellipse at 70% 5%,#f8f4df 0,transparent 58%),linear-gradient(145deg,#dfe8d8,#bfd3bc)}
+.botanical .trace{position:absolute;width:58%;height:68%;border-radius:48% 52% 53% 47%;border:1px solid #40644f66;transform:rotate(-24deg)}
+.botanical .trace:nth-child(2){transform:rotate(22deg);width:50%;height:78%}
+.botanical .trace:nth-child(3){transform:rotate(64deg);width:49%;height:62%}
+.botanical span{color:#315743;font:400 clamp(5rem,13vw,10rem)/1 Georgia,serif;z-index:1;transform:rotate(-14deg)}
+.solid,.outline{border-radius:0}
+#san-pham{padding-top:2.25rem}
+#san-pham .section-head{align-items:end;border-bottom:1px solid var(--line);padding-bottom:.85rem;margin-bottom:1.15rem}
+#san-pham h2{font-size:clamp(1.8rem,3vw,2.7rem)}
+#san-pham .section-head p{font-size:.82rem}
+.products{grid-template-columns:repeat(4,minmax(0,1fr));gap:1.05rem}
+.products article{border-bottom:1px solid var(--line);padding-bottom:1rem}
+.products h3{font:600 .98rem/1.42 "Be Vietnam Pro",Arial,sans-serif;letter-spacing:0}
+.products article>p:not(.eyebrow){font-size:.83rem;margin:.4rem 0}
+.products .tile{aspect-ratio:1;margin-bottom:.72rem;background:radial-gradient(ellipse at 45% 25%,#fff,#f1f2ec 75%)}
+.products .tile>div{width:48%;font-weight:600}
+.products .deck{background:#286053;color:#fff}
+.products .book{background:#ead2cc}
+.products .sheet{background:#fff7db}
+.products .leaf-card{background:#d7e5ca;transform:rotate(12deg);width:62%!important;aspect-ratio:1.2}
+.catalog-status{font-size:.85rem;margin:.65rem 0 0}
+@media(max-width:780px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:670px){.top>.brand{font-size:2.75rem}.top nav{gap:.45rem .8rem}.top nav a{font-size:.7rem}.hero{grid-template-columns:1fr}.hero-photo{aspect-ratio:1.8}.botanical{min-height:0}#san-pham .section-head{align-items:start}.catalog-tools input{min-width:0}}
+
+/* Mikropsy fanpage colors and illustrations */
+:root{--ink:#392924;--green:#226644;--muted:#694e45;--line:#efded6;--sage:#dcead9;--rose:#fae2dd;--sand:#fbe6c7;--berry:#a73b47;--blush:#fff2eb}
+.brand{color:var(--berry);letter-spacing:-.065em}
+.brand span,.footer .brand span{color:inherit}
+.top>.brand{display:flex;align-items:center;gap:.48rem}
+.brand-flower{font:400 1em/.9 Georgia,serif;letter-spacing:0}
+.hero{position:relative;isolation:isolate;grid-template-columns:minmax(0,1fr) minmax(230px,.58fr);margin-top:1rem;background:var(--blush);overflow:hidden}
+.hero-copy{padding:clamp(2rem,5vw,4rem) clamp(1.1rem,6vw,5rem);text-align:center}
+.hero h1{color:var(--berry);font:600 clamp(1.85rem,3.2vw,3.4rem)/1.19 "Lora",Georgia,serif;letter-spacing:-.035em}
+.hero .poem{color:#963e49;max-width:none;margin:1.1rem auto 1.4rem;font-size:clamp(1rem,1.7vw,1.27rem);line-height:1.55}
+.hero .actions{justify-content:center}
+.hero-photo{background:transparent;overflow:visible}
+.flower-art{position:relative;width:min(88%,285px);aspect-ratio:1;align-self:center;justify-self:center}
+.flower-art .petal,.flower-art .stem,.flower-art .leaf,.flower-art .center{position:absolute;display:block}
+.flower-art .petal{top:8%;width:29%;height:62%;left:36%;transform-origin:50% 91%;border-radius:62% 44% 57% 53% / 35% 65% 39% 64%;background:repeating-linear-gradient(109deg,#fff2 0 1px,transparent 1px 7px),linear-gradient(145deg,#ffac66,#e56222 68%,#dd4a19)}
+.flower-art .petal:nth-child(2){transform:rotate(-38deg);height:48%;top:20%}
+.flower-art .petal:nth-child(3){transform:rotate(43deg);height:49%;top:19%}
+.flower-art .petal:nth-child(4){transform:rotate(-17deg);width:23%;left:39%;background:linear-gradient(100deg,#f78438,#ffb370)}
+.flower-art .petal:nth-child(5){transform:rotate(19deg);width:20%;left:41%;background:linear-gradient(90deg,#d9491d,#f9863f)}
+.flower-art .stem{width:10%;height:42%;top:53%;left:45%;border-radius:22% 35% 10% 12%;background:linear-gradient(90deg,#22854d,#45a165)}
+.flower-art .leaf{height:13%;width:40%;top:75%;left:11%;border-radius:48% 70% 22% 78%;transform:rotate(16deg);background:repeating-linear-gradient(119deg,#fff1 0 2px,transparent 2px 7px),linear-gradient(70deg,#50ad72,#17824e)}
+.flower-art .leaf.right{left:51%;top:73%;transform:rotate(-18deg) scaleX(-1)}
+.flower-art .center{width:17%;aspect-ratio:1;top:55%;left:42%;border-radius:70% 50% 70% 48%;transform:rotate(-15deg);background:#f5a6aa}
+.solid{background:var(--berry);border-color:var(--berry);border-radius:20px}.solid:hover{background:#892b39}
+.outline{color:var(--berry);border-color:var(--berry)}
+.products .tile{background:radial-gradient(ellipse at 42% 22%,white,var(--blush) 85%)}
+.products .deck{background:#298259;color:white}
+.products .book{background:#f4b7b3;border-left-color:#a73b47!important}
+.products .sheet{background:#fbe3b8;color:#693218}
+.products .leaf-card{background:#d9ebd7;color:#226644}
+.cover.rose{color:var(--berry)}.cover.sand{color:#93421d}
+.service{background:#fdf0e8}.about{background:#fff9f5}
+footer{background:#226644}
+@media(max-width:670px){.hero{grid-template-columns:1fr}.hero-photo{aspect-ratio:unset;padding:0 0 1rem}.flower-art{width:min(63%,190px)}.hero-copy{padding-bottom:.25rem}.top>.brand{justify-self:center}}
+
+/* Header identity and landing copy */
+.brand-mark{display:inline-block;width:1em;height:1.1em;flex:none;vertical-align:-.16em}.top>.brand{font-size:clamp(1.85rem,4.7vw,3.2rem);letter-spacing:-.04em}.footer .brand{font-size:clamp(1.65rem,4vw,2.7rem);letter-spacing:-.04em}.footer .brand-mark{background:#fff4ed;border-radius:.15em;padding:.07em}.hero-copy{text-align:left}.hero h1{color:#202b25;font:500 clamp(2.2rem,4.1vw,4.1rem)/1.16 "Lora",Georgia,serif}.hero h1 em{color:#4c6549}.hero .actions{justify-content:flex-start}.hero .solid{background:#234e42;border-color:#234e42;border-radius:0}.hero .solid:hover{background:#163c32}.hero-copy>p:not(.eyebrow){max-width:31rem}.hero-copy{padding-left:clamp(1.25rem,4vw,4rem)}
+
+.hero{position:relative;display:grid;place-items:center;min-height:clamp(400px,53vw,610px);background:#fff;isolation:isolate;overflow:hidden;margin-top:0}.hero-copy{position:relative;text-align:center;z-index:1;padding:2.5rem 1rem}.hero h1{font-size:clamp(2.55rem,5.4vw,5.35rem);letter-spacing:-.052em}.hero-copy>p:not(.eyebrow){margin:1.25rem auto 1.5rem;max-width:31rem}.hero .actions{justify-content:center}.petals{position:absolute;inset:0;pointer-events:none}.petals span{position:absolute;color:#b74b51;font:3rem Georgia,serif}.petals span:nth-child(1){left:10%;top:17%;transform:rotate(-21deg)}.petals span:nth-child(2){right:9%;top:23%;color:#44835b;transform:rotate(34deg)}.petals span:nth-child(3){left:21%;bottom:12%;color:#bb6632;font-size:2.2rem}.petals span:nth-child(4){right:18%;bottom:10%;transform:rotate(-27deg)}.products .tile{background:radial-gradient(ellipse at 40% 30%,#fff,#fbf1eb)}.article-cover{text-decoration:none;display:block}.article-cover:hover h3{text-decoration:underline}.articles article>.eyebrow{margin-top:.6rem}.post-content{max-width:730px;min-height:55vh}.post-content h1{margin:1rem 0}.post-content p{margin:1.1rem 0}.post-content img{max-width:100%;height:auto}@media(max-width:670px){.hero{min-height:440px}.petals span:nth-child(3),.petals span:nth-child(4){display:none}.petals span:nth-child(1),.petals span:nth-child(2){top:2%;font-size:2rem}}

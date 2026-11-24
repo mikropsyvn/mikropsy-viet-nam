@@ -1,0 +1,4 @@
+title: Mikropsy Việt Nam
+lang: vi
+permalink: /bai-viet/:slug/
+exclude: [README.md]
